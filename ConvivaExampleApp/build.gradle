@@ -11,6 +11,13 @@ android {
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -36,7 +43,9 @@ dependencies {
 
     implementation bitmovinPlayerDependencies.bitmovinPlayer
 
-    implementation project(':conviva')
+    //implementation project(':conviva')
+    implementation "com.bitmovin.analytics:conviva:2.2.0"
+    implementation "org.apache.commons:commons-lang3:3.14.0"
 
     //implementation 'com.bitmovin.analytics:conviva:2.1.1'
     //api 'com.conviva.sdk:conviva-core-sdk:4.0.20'

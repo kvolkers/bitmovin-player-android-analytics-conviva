@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Map<String, Object> standardTags = new HashMap<>();
         standardTags.put("c3.cm.contentType", "VOD");
-        metadata.setAdditionalStandardTags(standardTags);
+        // metadata.setAdditionalStandardTags(standardTags);
 
         Map<String, String> customTags = new HashMap<>();
         customTags.put("custom_tag", "Episode");
@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // load source using the created source configuration
         bitmovinPlayer.load(buildSourceConfiguration());
+        bitmovinPlayer.play();
     }
 
     private PlayerConfig buildPlayerConfiguration() {
